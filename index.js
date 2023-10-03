@@ -14,6 +14,7 @@
 
 // Require the aws-sdk. This is a dev dependency, so if being used
 // outside of a Lambda execution environment, it must be manually installed.
+const { captureAWSv3Client } = require('aws-xray-sdk-core')
 const { RDSData } = require('@aws-sdk/client-rds-data')
 
 // Require sqlstring to add additional escaping capabilities
@@ -596,7 +597,7 @@ const init = (params) => {
 
     // TODO: Put this in a separate module for testing?
     // Create an instance of RDSDataService
-    RDS: new RDSData(options)
+    RDS: captureAWSv3Client(new RDSData(options))
   } // end config
 
   // Return public methods
