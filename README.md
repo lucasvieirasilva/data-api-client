@@ -8,6 +8,10 @@ The **Data API Client** is a lightweight wrapper that simplifies working with th
 
 For more information about the Aurora Serverless Data API, you can review the [official documentation](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html) or read [Aurora Serverless Data API: An (updated) First Look](https://www.jeremydaly.com/aurora-serverless-data-api-a-first-look/) for some more insights on performance.
 
+## Forked from jeremydaly/data-api-client
+
+This forked version of the data-api-client has been modified to support AWS SDK v3.
+
 ## Simple Examples
 
 The **Data API Client** makes working with the Aurora Serverless Data API super simple. Require and instantiate the library with basic configuration information, then use the `query()` method to manage your workflows. Below are some examples.
